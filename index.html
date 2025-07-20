@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Font Changer - Premium Edition</title>
+    
+    <!-- Google Fonts - All Professional Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Pacifico&family=Lobster&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Satisfy&family=Orbitron:wght@400;700;900&family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Premium Font Changer</h1>
+            <p class="subtitle">Professional typography at your fingertips</p>
+            
+            <!-- Enhanced Text Input Section -->
+            <div class="text-input-container">
+                <div class="input-box">
+                    <label for="customText" class="input-label">
+                        <svg class="input-icon" viewBox="0 0 24 24">
+                            <path d="M14,17H7V15H14M17,13H7V11H17M17,9H7V7H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z"/>
+                        </svg>
+                        Your Custom Text
+                    </label>
+                    <textarea id="customText" placeholder="Type your text here..." class="text-input" maxlength="300">The quick brown fox jumps over the lazy dog</textarea>
+                    <div class="input-footer">
+                        <span class="char-counter" id="charCounter">41/300</span>
+                        <button id="resetText" class="reset-btn">Reset</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Live Preview Section -->
+            <div class="live-preview-section">
+                <h3>Live Preview</h3>
+                <div class="preview-display">
+                    <p id="livePreviewText">The quick brown fox jumps over the lazy dog</p>
+                    <span class="current-font-label">Current Font: <span id="currentFontDisplay">Helvetica</span></span>
+                </div>
+            </div>
+            
+            <!-- Search and Controls -->
+            <div class="controls-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <svg class="search-icon" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                        <input type="text" id="searchInput" placeholder="Search fonts..." class="search-input">
+                        <button id="clearSearch" class="clear-btn">×</button>
+                    </div>
+                </div>
+                
+                <div class="font-size-control">
+                    <label for="fontSizeSlider" class="slider-label">Size: <span id="fontSizeValue">24px</span></label>
+                    <input type="range" id="fontSizeSlider" class="font-slider" min="14" max="72" value="24">
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">🌟 All Fonts</button>
+                <button class="category-btn" data-category="sans-serif">✅ Sans-Serif</button>
+                <button class="category-btn" data-category="serif">📚 Serif</button>
+                <button class="category-btn" data-category="monospace">🧠 Monospace</button>
+                <button class="category-btn" data-category="handwritten">✍️ Handwritten</button>
+                <button class="category-btn" data-category="experimental">🦄 Unique</button>
+            </div>
+
+            <!-- Font Grid -->
+            <div class="fonts-grid" id="fontsGrid">
+                <!-- Font cards will be dynamically generated -->
+            </div>
+        </main>
+
+        <!-- Copy Section -->
+        <div class="copy-section">
+            <h3>Export Your Text</h3>
+            <div class="copy-buttons">
+                <button id="copyPlainBtn" class="copy-btn primary">
+                    📋 Copy Text
+                </button>
+                <button id="copyStyledBtn" class="copy-btn secondary">
+                    ✨ Copy Styled
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
